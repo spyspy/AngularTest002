@@ -13,7 +13,7 @@ class Joke {
     this.punchline = punchline;
     this.hide = true;
   }
-
+ 
   toggle() {
     this.hide = !this.hide;
   }
@@ -33,13 +33,13 @@ class Joke {
   `
 })
 class JokeComponent {
-  @Input('joke') data: Joke;
+  @Input('jokea') data: Joke;
 }
 
 @Component({
   selector: 'joke-list',
   template: `
-<joke *ngFor="let j of jokes" [joke]="j"></joke>
+<joke *ngFor="let j of jokes" [jokea]="j"></joke>
   `
 })
 class JokeListComponent {
@@ -49,7 +49,7 @@ class JokeListComponent {
     this.jokes = [
       new Joke("What did the cheese say when it looked in the mirror?", "Hello-me (Halloumi)"),
       new Joke("What kind of cheese do you use to disguise a small horse?", "Mask-a-pony (Mascarpone)"),
-      new Joke("A kid threw a lump of cheddar at me", "I thought ‘That’s not very mature’"),
+      new Joke("A kid threw a lump of cheddar at me", "I thought that's not very mature"),
     ];
   }
 }
